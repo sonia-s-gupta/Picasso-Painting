@@ -1,0 +1,149 @@
+/*Body styling*/
+body{
+    background-image: url(https://images.unsplash.com/photo-1454789548928-9efd52dc4031?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHVuaXZlcnNlfGVufDB8fDB8fHww);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Flexbox styling for centering content*/
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* Min height to ensure the content is always visible */
+    min-height: 100vh;
+    /*Flexbox styling for column layout*/
+    flex-direction: column;
+}
+
+/*Styling for page with picasso class*/
+body.picasso {
+    background-color: turquoise !important;
+    background-color: gold;
+    background-image: none !important;
+    /* Flexbox styling puts content at top*/
+    justify-content: flex-start;
+}
+
+/* Styling for the h1 and p tags */
+h1 {
+    font-weight: bold;
+    color: white;
+    text-align: left;
+    font-size: 4em;
+    margin-top: 10px;
+    margin-bottom: 0.5em;
+    padding: 10px;
+}
+
+p {
+    font-weight: bold;
+    color: maroon;
+    font-size: 1.5em;
+    text-align: left;
+    margin-top: 0.5em;
+    padding: 10px;
+}
+
+/* Container for organizing form and list side-by-side */
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Form container styling */
+.form-container {
+    background-color: white;
+    color: black;
+    padding: 20px;
+    width: 40%;
+    box-sizing: border-box; 
+    margin-right: 20px;
+}
+
+.form-title {
+    text-align: center;
+    font-weight: bold;
+    color: navy;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+/* Flexbox container for list */
+.div-Flex {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    width: 60%;
+    box-sizing: border-box;
+}
+
+/* List container styling */
+ol {
+    list-style-type: decimal;
+    padding-left: 20px;
+    color: white;
+    width: 100%;
+}
+
+li {
+    color: white;
+}
+
+/* Styling for odd list items */
+li:nth-child(odd) {
+        background-color: fuchsia;
+}
+
+/* Styling for form link */
+.form-link {
+    text-align: center;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.form-link a {
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/*Hover effect for form link*/
+.form-link a:hover {
+    text-decoration: underline;
+}
+
+/*Image styling for container*/
+.photo-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.photo-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/*Red square overlay on image*/
+.red-square {
+    position: absolute;
+    top: 50%;
+    left: 30px;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    z-index: 1;
+}
+
+/*Media query for screens smaller than 768 px (tablet and mobile)*/
+@media (max-width: 768px) {
+    .red-square {
+        background-color: yellow;
+    }
+}

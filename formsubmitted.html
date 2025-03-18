@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <!--Bootstrap CSS implementation-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!--External CSS link-->
+    <link rel="stylesheet" href="external.css">
+</head>
+<body>
+  <!--Main container for page-->
+  <div class="container">
+   
+    <!--Row to hold form and ordered list-->
+    <div class="row">
+      <!--Form container, takes up 12 columns on small screens (mobile) and 6 columns on medium screens (tablet/desktop)-->
+      <div class="col-12 col-md-6">
+       <div class="form-container">
+        <h2 class="form-title">Submit Form Here</h2>
+        <!--Form submission to Picasso.html-->
+        <form action="Picasso.html" method="get">
+          
+          <!--Creates email input field (pulled from Bootstrap Forms)-->
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+
+        <!--Password input field-->
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        
+        <!--Checkbox input field-->
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        
+        <!--Submit button-->
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </div>
+  
+  <!--Ordered list container, responsive design detailed as above-->
+  <div class="col-12 col-md-6">
+     <div class="div-Flex">
+        <ol>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente, blanditiis? Labore ipsam laborum suscipit eum rem. A alias, quibusdam reiciendis suscipit sit neque quos laborum architecto ad rem sequi sapiente.</li>
+            <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam quasi dignissimos, earum nemo nostrum sed aperiam qui perspiciatis expedita alias tempora, doloremque commodi error suscipit, nobis illo consequuntur sequi impedit.</li>
+            <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto asperiores totam, ratione accusantium tempore eum libero consectetur. Adipisci cum dolorum quidem sunt aliquam nam! Odio, error. Provident nihil repellendus labore.</li>
+          </ol>
+      </div>
+  </div>
+</div>
+
+    <!--Link to NASA website centered below form and list-->
+    <div class="form-link text-center mt-3">
+      <a href="https://www.nasa.gov/" target="_blank">Visit Our Website</a>
+    </div>
+
+    <!--Photo container for displaying sky and red square image overlapping it-->
+    <div class="photo-container">
+      <img src="https://images.unsplash.com/photo-1597200381847-30ec200eeb9a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2t5fGVufDB8fDB8fHww" alt="Sky">
+      <div class="red-square"></div>
+    </div>
+</body>
+</html>
