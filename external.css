@@ -9,8 +9,8 @@ body{
     align-items: flex-start;
     /* Min height to ensure the content is always visible */
     min-height: 100vh;
-    /*Flexbox styling for column layout*/
-    flex-direction: column;
+    /*Flexbox styling for row layout*/
+    flex-direction: row;
 }
 
 /*Styling for page with picasso class*/
@@ -18,15 +18,13 @@ body.picasso {
     background-color: turquoise !important;
     background-color: gold;
     background-image: none !important;
-    /* Flexbox styling puts content at top*/
-    justify-content: flex-start;
 }
 
-/* Styling for the h1 and p tags */
+/* Styling for the h1 and p tags on picasso page*/
 h1 {
     font-weight: bold;
     color: white;
-    text-align: left;
+    text-align: center;
     font-size: 4em;
     margin-top: 10px;
     margin-bottom: 0.5em;
@@ -37,19 +35,34 @@ p {
     font-weight: bold;
     color: maroon;
     font-size: 1.5em;
-    text-align: left;
+    text-align: center;
     margin-top: 0.5em;
     padding: 10px;
 }
 
-/* Container for organizing form and list side-by-side */
+/*Centering content for the picasso container*/
+body.picasso .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-top: 20px;
+}
+
+
+/* Flexbox ontainer for organizing form, list, and photo side-by-side */
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: flex-start;
-    width: 100%;
-    margin-bottom: 20px;
+    width: 90%;
+    max-width: 1400px;
+    gap: 20px;
+    padding-top: 40px;
+    padding-left: 0;
+    margin: 0 auto;
 }
 
 /* Form container styling */
@@ -57,9 +70,11 @@ p {
     background-color: white;
     color: black;
     padding: 20px;
-    width: 40%;
+    width: 100%;
     box-sizing: border-box; 
-    margin-right: 20px;
+    word-wrap: break-word;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .form-title {
@@ -75,9 +90,9 @@ p {
 /* Flexbox container for list */
 .div-Flex {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
-    padding: 20px;
-    width: 60%;
+    align-items: flex-start;
     box-sizing: border-box;
 }
 
@@ -86,7 +101,6 @@ ol {
     list-style-type: decimal;
     padding-left: 20px;
     color: white;
-    width: 100%;
 }
 
 li {
@@ -120,12 +134,15 @@ li:nth-child(odd) {
 .photo-container {
     position: relative;
     width: 100%;
-    max-width: 600px;
-    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 0;
 }
 
 .photo-container img {
     width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 10px;
 }
@@ -145,5 +162,40 @@ li:nth-child(odd) {
 @media (max-width: 768px) {
     .red-square {
         background-color: yellow;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    .form-container, .div-Flex, .photo-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .picasso-container {
+        padding-top: 20px;
+    }
+}
+
+/*Media query for screens smaller than  1024px*/
+
+@media (max-width: 1024px) {
+    .container {
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .form-container, .div-Flex, .photo-container{
+        width: 80%;
+        max-width: 600px;
+        margin: 10px 0;
+    }
+
+    .picasso-container {
+        padding: 20px;
     }
 }
